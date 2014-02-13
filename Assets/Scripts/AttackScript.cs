@@ -96,7 +96,7 @@ public class AttackScript : MonoBehaviour {
 		}
 	}
 
-	void FindTarget()
+	public void FindTarget()
 	{
 		Collider[] hits = Physics.OverlapSphere (transform.position, targetRange);
 		foreach(Collider hit in hits)

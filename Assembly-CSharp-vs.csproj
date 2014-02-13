@@ -115,8 +115,11 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
      <Compile Include="Assets\CaveAndShipHPBars.cs" />
+     <Compile Include="Assets\LoadGame.cs" />
      <Compile Include="Assets\Models\FT_CaveWorm\Script\PlayAnimation.cs" />
      <Compile Include="Assets\Models\FT_CaveWorm\Script\SubstanceGUI.cs" />
+     <Compile Include="Assets\NewGame.cs" />
+     <Compile Include="Assets\ScaleGUITexture.cs" />
      <Compile Include="Assets\Scripts\AreaDamage.cs" />
      <Compile Include="Assets\Scripts\AttackScript.cs" />
      <Compile Include="Assets\Scripts\CameraMover.cs" />

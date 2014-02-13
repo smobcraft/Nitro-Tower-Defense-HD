@@ -46,6 +46,18 @@ public class Health : MonoBehaviour {
 	public void DealDamage(float amt)
 	{
 		currentHP -= amt;
+		if (this.GetComponent<PathfindingScript>().enemyTarget.name == "Empire Nexus")
+		{
+			Debug.Log ("happened");
+			if (this.name == "FlameThrower(Clone)")
+			{
+				this.GetComponent<FlameThrowerAttackScript>().FindTarget();
+			}
+			else
+			{
+				this.GetComponent<AttackScript>().FindTarget();
+			}
+		}
 	}
 	
 	void Die()
@@ -54,7 +66,7 @@ public class Health : MonoBehaviour {
 		{
 			if (this.name == "Empire Nexus")
 				GameObject.Find ("Player").GetComponent<UnitStats>().level++;
-			Application.LoadLevel("Level0");
+			Application.LoadLevel("Level1");
 
 		}
 			

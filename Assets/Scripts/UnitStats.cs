@@ -19,7 +19,7 @@ public class UnitStats : MonoBehaviour {
 		//ssDamage = PlayerPrefs.GetFloat ("StandardSuitDamage", 0);
 		//fsHP = PlayerPrefs.GetFloat ("FlameSuitHP", 0);
 		//fsDamage = PlayerPrefs.GetFloat ("FlameSuitDamage", 0);
-		//level = PlayerPrefs.GetFloat ("Level", 1);
+		level = PlayerPrefs.GetFloat ("Level", 1);
 		es.level = level;
 		es.SetSpawnRate ();
 		GetComponent<UnitSpawning> ().maxResources = 3 * level;
