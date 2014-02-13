@@ -10,10 +10,12 @@ public class EnemySpawner : MonoBehaviour {
 	public GameObject spider;
 	public GameObject venomSpitter;
 	public GameObject spawnLoc;
+	public float level;
 
 	// Use this for initialization
 	void Start () {
-		
+		//level = GameObject.Find ("Player").GetComponent<UnitStats> ().level;
+
 	}
 	
 	// Update is called once per frame
@@ -25,10 +27,19 @@ public class EnemySpawner : MonoBehaviour {
 			Instantiate(spider, spawnLoc.transform.position, transform.rotation);
 			spiderCD = 0;
 		}
-		if (venomSpitterCD >= venomSpitterSpawnRate)
+		if (venomSpitterCD >= venomSpitterSpawnRate && level > 3)
 		{
 			Instantiate(venomSpitter, spawnLoc.transform.position, transform.rotation);
 			venomSpitterCD = 0;
+		}
+	}
+
+	public void SetSpawnRate()
+	{
+		for (int i = 1; i < level; i++)
+		{
+			spiderSpawnRate *= .9f;
+			venomSpitterSpawnRate *= .9f;
 		}
 	}
 }

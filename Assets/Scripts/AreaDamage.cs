@@ -10,6 +10,11 @@ public class AreaDamage : MonoBehaviour {
 	public BoxCollider box;
 	float cooldown;
 
+	void Start()
+	{
+		damagePerSecond += GameObject.Find ("Player").GetComponent<UnitStats> ().fsDamage;
+	}
+
 	void Update()
 	{
 		cooldown += Time.deltaTime;

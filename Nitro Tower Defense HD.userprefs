@@ -1,8 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CaveAndShipHPBars.cs">
     <Files>
-      <File FileName="Assets/CaveAndShipHPBars.cs" Line="1" Column="1" />
+      <File FileName="Assets/CaveAndShipHPBars.cs" Line="203" Column="49" />
+      <File FileName="Assets/Scripts/UnitStats.cs" Line="22" Column="5" />
+      <File FileName="Assets/Scripts/Health.cs" Line="30" Column="33" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" Line="42" Column="31" />
+      <File FileName="Assets/Scripts/UnitSpawning.cs" Line="26" Column="57" />
+      <File FileName="Assets/UpgradeClick.cs" Line="23" Column="47" />
+      <File FileName="Assets/Scripts/SpawnUnit.cs" Line="23" Column="5" />
+      <File FileName="Assets/Scripts/AreaDamage.cs" Line="10" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

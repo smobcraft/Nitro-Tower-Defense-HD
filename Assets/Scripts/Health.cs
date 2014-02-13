@@ -13,6 +13,25 @@ public class Health : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.Find ("Player").GetComponent<UnitStats> ();
+
+		if (this.name == "StandardInfantry(Clone)")
+		{
+			maxHP += player.ssHP;
+			GetComponent<AttackScript>().damage += player.ssDamage;
+		}
+
+		if (this.name == "FlameThrower(Clone)")
+		{
+			maxHP += player.fsHP;
+			GetComponent<FlameThrowerAttackScript>().damage += player.fsDamage;
+
+		}
+
+		if (this.name == "Colony Tank 1(Clone)")
+		{
+			maxHP += player.tankHP;
+			GetComponent<AttackScript>().damage += player.tankDamage;
+		}
 		currentHP = maxHP;
 	}
 	
@@ -32,7 +51,13 @@ public class Health : MonoBehaviour {
 	void Die()
 	{
 		if (this.name == "Colony Nexus" || this.name == "Empire Nexus")
+		{
+			if (this.name == "Empire Nexus")
+				GameObject.Find ("Player").GetComponent<UnitStats>().level++;
 			Application.LoadLevel("Level0");
+
+		}
+			
 		player.score += points;
 		if (deathSound != null)
 		{
